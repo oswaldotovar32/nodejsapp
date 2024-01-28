@@ -11,7 +11,7 @@ export const initializationOfDatabase = async () => {
         });
 }
 
-initializationOfDatabase();
 export const server = app.listen(process.env.PORT, async () => {
+    await initializationOfDatabase();
     console.log(`Server listening on port ${process.env.PORT}`);
 });
