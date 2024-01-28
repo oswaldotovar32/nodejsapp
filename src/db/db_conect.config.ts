@@ -16,7 +16,7 @@ export const myDataSource = new DataSource({
     password: process.env.PASS_DB,
     database: process.env.NAME_DB,
     entities: [Customer],
-    logging: true,
+    logging: false,
     synchronize: false
 });
 

@@ -3,17 +3,15 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import { myDataSource } from "./db/db_conect.config";
 
-app.listen(process.env.PORT, () => {
-    console.log("Server listening on port " + process.env.PORT);
-});
-
-async function initializeDatabase() {
-    try {
-        await myDataSource.initialize();
-        console.log('Database initialized');
-    } catch (error) {
-        console.log(error);
-    }
+export const initializationOfDatabase = async () => {
+    await myDataSource
+        .initialize()
+        .catch((err) => {
+            console.log('Error during Data Source initialization:', err);
+        });
 }
 
-initializeDatabase();
+initializationOfDatabase();
+export const server = app.listen(process.env.PORT, async () => {
+    console.log(`Server listening on port ${process.env.PORT}`);
+});

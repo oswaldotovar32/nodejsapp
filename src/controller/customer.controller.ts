@@ -8,7 +8,7 @@ import { callPostServer } from "../libs/API/api.libs";
 
 export const regfields = async (req: Request, res: Response) => {
     try {
-        const respCustomers = await callPostServer('https://platon.cf-it.at/affiliate/getRegistrationFields', {
+        const respCustomers = await callPostServer(process.env.URL_API, {
             login: process.env.USER_LOGIN,
             password: process.env.PASS_LOGIN,
             data: {
