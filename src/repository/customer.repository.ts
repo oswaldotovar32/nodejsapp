@@ -1,6 +1,11 @@
 import { Customer } from "../model/customer.model";
 import { ICustomer, ICustomerResponse } from "../libs/interface/all.interfaces";
 
+/**
+ * Method for create multiples customer with url
+ * @param customersResponse ICustomerResponse
+ * @returns 
+ */
 export const createCustomers = async (customersResponse: ICustomerResponse): Promise<boolean> => {
     return new Promise<boolean>(async (resolve, reject) => {
         try {
@@ -21,6 +26,11 @@ export const createCustomers = async (customersResponse: ICustomerResponse): Pro
     })
 };
 
+/**
+ * Method for create customer
+ * @param customerData ICustomer
+ * @returns 
+ */
 export const createCustomer = async (customerData: ICustomer) => {
     return new Promise(async (resolve, reject) => {
         try {

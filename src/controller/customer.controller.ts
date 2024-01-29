@@ -6,6 +6,12 @@ dotenv.config();
 
 import { callPostServer } from "../libs/API/api.libs";
 
+/**
+ * Mehtod for create and call the external server
+ * @param req Request
+ * @param res Response
+ * @returns 
+ */
 export const regfields = async (req: Request, res: Response) => {
     try {
         const respCustomers = await callPostServer(process.env.URL_API, {
