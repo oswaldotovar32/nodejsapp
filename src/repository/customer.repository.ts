@@ -21,11 +21,11 @@ export const createCustomers = async (customersResponse: ICustomerResponse): Pro
     })
 };
 
-export const createCustomer = async (customer: ICustomer) => {
+export const createCustomer = async (customerData: ICustomer) => {
     return new Promise(async (resolve, reject) => {
         try {
-            console.log('customer', customer);
-            resolve(true);
+            const customer = await Customer.save(customerData);
+            resolve(customer);
         } catch (error) {
             reject(error);
         }
