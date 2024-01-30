@@ -25,15 +25,17 @@ Este proyecto es una aplicación Node.js escrita en TypeScript, con pruebas unit
 4. **Archivos de configuracion**
  Deberas agregar el archivo .env en la raiz del proyecto
 
-5. **Ejecutable del proyecto**
+## Ejecución
+
+1. **Ejecutable del proyecto**
    ```bash
      npm run build
    ```
-6. **Ejecutar en tiempo real para entorno de producción**
+2. **Ejecutar en tiempo real para entorno de producción**
    ```bash
      npm run start
    ```
-7. **Ejecutar en tiempo real para entorno de desarrollo**
+3. **Ejecutar en tiempo real para entorno de desarrollo**
    ```bash
      npm run dev
    ```
